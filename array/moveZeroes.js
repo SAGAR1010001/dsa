@@ -21,3 +21,24 @@ const moveZeroes = (nums1) => {
 
 const result = moveZeroes(nums1);
 console.log("result====>", result);
+
+const moveZeroes2 = (nums1) => {
+  console.log("nums2==>", nums1);
+  let newsArray = [];
+  let zeroCount = 0;
+  for (let i = 0; i < nums1.length; i++) {
+    if (nums1[i] !== 0) {
+      newsArray.push(nums1[i]);
+    } else {
+      zeroCount++;
+    }
+  }
+
+  for (let j = 0; j < zeroCount; j++) {
+    newsArray.push(0);
+  }
+  return newsArray;
+};
+
+const result2 = moveZeroes2(nums1);
+console.log("result2====>", result2);
